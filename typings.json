@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "jest": "registry:dt/jest#19.2.0+20170312200138",
+    "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20170117213337"
+  },
+  "globalDevDependencies": {}
+}

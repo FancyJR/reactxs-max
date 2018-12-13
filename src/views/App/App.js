@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DatePicker } from 'antd';
+import { Button } from 'antd';
 import logo from '../../assets/logo.svg';
 import './App.css';
 
@@ -14,7 +14,7 @@ class App extends Component {
           </p>
             登录
         </header>
-        <DatePicker />
+        <Button>按钮</Button>
       </div>
     );
   }
