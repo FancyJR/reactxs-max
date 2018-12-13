@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Link
+}from 'react-router-dom';
+import Routes from './routes/router';
 import './index.css';
-import App from './views/App/App';
 import * as serviceWorker from './serviceWorker';
+
+export default class App extends Component{
+  render(){
+      return (
+          <Router>
+            <div>
+              <ul className="nav">
+    　　　　　　<li><Link to="/">App</Link></li>
+    　　　　　　<li><Link to="/Login">Login</Link></li>
+  　　 　　　　 </ul>
+              <hr />
+              <Routes />
+            </div>
+          </Router>
+      )
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
