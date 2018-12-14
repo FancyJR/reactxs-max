@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Icon } from 'antd';
+import {
+  Link
+}from 'react-router-dom';
 import apple from '../../assets/apple.jpeg';
 import './Login.css';
 
@@ -33,7 +36,9 @@ class LoginPlus extends Component {
               })(<Input addonBefore={<Icon type="lock" />} placeholder="请输入密码" type="password" />)}
             </FormItem>
             <FormItem>
+            <Link to="/PersonalData">
               <Button htmlType="submit" className="cert-btn">登录</Button>
+            </Link>
             </FormItem>
           </Form>
         </div>
