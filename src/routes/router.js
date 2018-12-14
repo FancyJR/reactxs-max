@@ -9,8 +9,8 @@ class Routes extends Component{
     render(){
         return (
           <div>
-            <Route exact path="/" component={App} />
-            <Route path="/Login" component={Login} />
+            <Route exact path="/" component={Login} />
+            {/* <Route path="/" component={App} /> */}
           </div>
         )
     }

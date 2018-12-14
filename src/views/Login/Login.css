@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
-.box {
-  background-color: lightpink;
+.Apple {
+  min-height: 100vh;
+  text-align: center;
+  background:url(../../assets/bg.gif) no-repeat;
+  background-size: 100% 100%;
+}
+
+.Apple-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 20vmin;
+  border-radius: 10vmin;
+}
+
+.Apple-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Login-box {
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 40px;
 }

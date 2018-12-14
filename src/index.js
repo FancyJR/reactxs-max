@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Link
+  // Link
 }from 'react-router-dom';
 import Routes from './routes/router';
 import './index.css';
@@ -13,11 +13,11 @@ export default class App extends Component{
       return (
           <Router>
             <div>
-              <ul className="nav">
+              {/* <ul className="nav">
     　　　　　　<li><Link to="/">App</Link></li>
     　　　　　　<li><Link to="/Login">Login</Link></li>
   　　 　　　　 </ul>
-              <hr />
+              <hr /> */}
               <Routes />
             </div>
           </Router>
