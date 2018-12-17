@@ -4,7 +4,7 @@ import {
   Link
 }from 'react-router-dom';
 import apple from '../../assets/apple.jpeg';
-import './Login.css';
+import './Login.less';
 
 const FormItem = Form.Item
 class LoginPlus extends Component {

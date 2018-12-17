@@ -5,7 +5,7 @@ import {
   // Link
 }from 'react-router-dom';
 import Routes from './routes/router';
-import './index.css';
+import './index.less';
 import * as serviceWorker from './serviceWorker';
 
 export default class App extends Component{
