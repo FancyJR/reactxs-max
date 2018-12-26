@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import App from '$component/App';
-import './PersonalData.css';
+import './PersonalData.less';
 
 class PersonalData extends Component {
   render() {
