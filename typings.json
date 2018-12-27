@@ -1,5 +1,6 @@
 {
   "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20161016142654",
     "jest": "registry:dt/jest#19.2.0+20170312200138",
     "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20170117213337"
   },

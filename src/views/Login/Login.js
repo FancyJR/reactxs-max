@@ -3,11 +3,36 @@ import { Form, Button, Input, Icon } from 'antd';
 import {
   Link
 }from 'react-router-dom';
+import axios from 'axios';
+import '$mock';
 import apple from '../../assets/apple.jpeg';
 import './Login.less';
 
 const FormItem = Form.Item
 class LoginPlus extends Component {
+  componentDidMount() {
+    this.mock();
+    this.loginOut();
+  }
+  mock() {
+    axios.get('/newLogin')
+      .then(function(response){
+        console.log(response.data);
+      })
+      .catch(function(err){
+        console.log(err);
+      });
+  }
+  loginOut() {
+    axios.get('/loginOut')
+      .then(function(response){
+        console.log(response.data);
+      })
+      .catch(function(err){
+        console.log(err);
+      });
+  }
+
   render() {
     const { getFieldDecorator } = this.props.form
     return (

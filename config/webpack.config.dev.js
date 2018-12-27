@@ -153,6 +153,7 @@ module.exports = {
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
       '$component': path.join(__dirname, '..', 'src/component'),
+      '$mock': path.join(__dirname, '..', 'src/mock/apiManager'),
     },
     plugins: [
       // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -183,17 +184,28 @@ module.exports = {
       // It's important to do this before Babel processes the JS.
       {
         test: /\.(js|mjs|jsx)$/,
-        enforce: 'pre',
-        use: [
-          {
-            options: {
-              formatter: require.resolve('react-dev-utils/eslintFormatter'),
-              eslintPath: require.resolve('eslint'),
+        // enforce: 'pre',
+        // use: [
+        //   {
+        //     options: {
+        //       formatter: require.resolve('react-dev-utils/eslintFormatter'),
+        //       eslintPath: require.resolve('eslint'),
               
-            },
-            loader: require.resolve('eslint-loader'),
+        //     },
+        //     loader: require.resolve('eslint-loader'),
+        //   },
+        // ],
+        enforce: 'pre',
+        use: [{
+          // @remove-on-eject-begin
+          // Point ESLint to our predefined config.
+          options: {
+            //configFile: path.join(__dirname, '../.eslintrc'),
+            useEslintrc: true
           },
-        ],
+          // @remove-on-eject-end
+          loader: 'eslint-loader'
+        }],
         include: paths.appSrc,
       },
       {
